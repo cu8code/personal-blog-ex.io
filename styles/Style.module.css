@@ -1,0 +1,69 @@
+.neonText {
+  animation: neonText 3s ease-in-out infinite alternate;
+  letter-spacing: 1rem;
+}
+
+@keyframes neonText {
+  from {
+    text-shadow: 0 0 7px var(--color-dark), 0 0 10px var(--color-dark),
+      0 0 21px var(--color-dark), 0 0 42px var(--color-dark),
+      0 0 82px var(--color-dark), 0 0 92px var(--color-dark),
+      0 0 102px var(--color-dark), 0 0 151px var(--color-dark);
+    color: var(--color-dark);
+  }
+
+  50% {
+    text-shadow: 0 0 7px var(--color-light), 0 0 10px var(--color-light),
+      0 0 21px var(--color-light), 0 0 42px var(--color-light),
+      0 0 82px var(--color-light), 0 0 92px var(--color-light),
+      0 0 102px var(--color-light), 0 0 151px var(--color-light);
+    color: var(--color-light);
+  }
+
+  to {
+    text-shadow: 0 0 7px var(--color-hightlight),
+      0 0 10px var(--color-hightlight), 0 0 21px var(--color-hightlight),
+      0 0 42px var(--color-hightlight), 0 0 82px var(--color-hightlight),
+      0 0 92px var(--color-hightlight), 0 0 102px var(--color-hightlight),
+      0 0 151px var(--color-hightlight);
+    color: var(--color-hightlight);
+  }
+}
+
+.blink {
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.typing {
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  animation: typing 1s steps(20, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.border{
+  border: 2px solid var(--color-dark);
+}
+
+.padding{
+  padding: 5%;
+}
