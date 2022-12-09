@@ -36,14 +36,14 @@ export default function Home(props: {
       <div className={`${style.border} ${style.padding}`}>
         <h3>About Me ?</h3>
         <p>
-          Think of a WEEB | with LIBRA BRAIN | with A linking for HORROR and
-          TORTURE | with a hate for RAPIST | with a love of old tech | with a
-          pro LGBT brain | with a LOVEEEE for GUNNNSSSS | with Super ANTI DRUG
-          and ALCOHOL heart.
-        </p>
+          weeb | anti-drug | anti-alcohol | pro-lgbt | pro-gun | pro-choice |
+          pro-democracy | pro-multipolar-world
+        </p>  
         <h3>TECH I USE ?</h3>
         <p>VIM | LINUX | GNOME | TYPESCRIPT | REACT</p>
-        <h3>BUTTONS !</h3>
+        <h3>What do i like ?</h3>
+        <p>Anime | Manga | Manhwa | Coding | Politics</p>
+        <h3>Buttons</h3>
         <p></p>
       </div>
     </div>
