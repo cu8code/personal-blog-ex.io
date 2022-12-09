@@ -1,6 +1,6 @@
 import Head from "next/head";
 import style from "../styles/Style.module.css";
-import { Profile } from "../components/profile/profile";
+import { Nav } from "../components/nav/nav";
 
 const TITLE = "Ankan Roy FrontEnd Web developer";
 const S_TITLE = "~/Ankan Roy";
@@ -31,6 +31,7 @@ export default function Home(props: {
         {S_TITLE}
         <span className={style.blink}>_</span>{" "}
       </h1>
+      <Nav links={["~", "~/blog"]}></Nav>
       <i>{props.data.content}</i>
       <br />
       <div className={`${style.border} ${style.padding}`}>
@@ -38,7 +39,7 @@ export default function Home(props: {
         <p>
           weeb | anti-drug | anti-alcohol | pro-lgbt | pro-gun | pro-choice |
           pro-democracy | pro-multipolar-world
-        </p>  
+        </p>
         <h3>TECH I USE ?</h3>
         <p>VIM | LINUX | GNOME | TYPESCRIPT | REACT</p>
         <h3>What do i like ?</h3>
