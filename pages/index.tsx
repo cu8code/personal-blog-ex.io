@@ -27,6 +27,18 @@ VIM | LINUX | GNOME | TYPESCRIPT | REACT | nextjs | wayland | lazygit |
 markdown | git
 `.toUpperCase();
 
+const bullshit = `
+Hello Friend, welcome to my corner of the internet. I am ankan roy 
+I am a 16 old guy from India, who loves computers and softwares. I am also a CS grad.
+But most importantly I am a man of culture. 
+`;
+
+const bullshit2 = `
+This place is home for all my psychological dysfunctioning.
+A place where I am in control, with no censorship or manupilation.
+A place where my words don't get mixed up with noise.
+`;
+
 const whatDoIlike = `
 Anime | Manga | Manhwa | Coding | Politics
 `.toUpperCase();
@@ -36,19 +48,23 @@ export default function Home(props: {}) {
     return (
       <Layout>
         <div className={`${style.padding}`}>
-          <h3>About Me ?</h3>
+          <p>{bullshit}</p>
+          <p>
+            <i>{bullshit2}</i>
+          </p>
+          <h3># About Me ?</h3>
           <p> {aboutMe} </p>
-          <h3>Tech I Use ?</h3>
+          <h3># Tech I Use ?</h3>
           <p>{techIUse}</p>
-          <h3>What do i like ?</h3>
+          <h3># What do i like ?</h3>
           <p>{whatDoIlike}</p>
-          <h3>Best Movies ?</h3>
+          <h3># Best Movies ?</h3>
           <p>Super 30 | Dangal</p>
-          <h3>Best TV show ?</h3>
+          <h3># Best TV show ?</h3>
           <p>Silicon Valley</p>
-          <h3>Games ?</h3>
+          <h3># Games ?</h3>
           <p>clash of Clan | pubgm</p>
-          <h3>Best Anime ?</h3>
+          <h3># Best Anime ?</h3>
           <p>Attack on Titan | Demon Slayer</p>
         </div>
       </Layout>

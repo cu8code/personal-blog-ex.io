@@ -3,7 +3,7 @@ import { Nav } from "../components/nav/nav";
 import style from "../styles/Style.module.css";
 
 const TITLE = "Ankan Roy FrontEnd Web developer";
-const S_TITLE = "~/Ankan Roy";
+const S_TITLE = "[CuXCode]";
 const DESCRIPTION = "An Website about ME and My Daily Adventure";
 
 export default function Layout(props: { children: React.ReactNode }) {
@@ -16,7 +16,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       </Head>
       <h1 className={`${style.neonText}`}>
         {S_TITLE}
-        <span className={style.blink}>_</span>{" "}
+        <span className={style.blink}>💡</span>{" "}
       </h1>
       <Nav
         links={[
