@@ -9,9 +9,7 @@ export function Nav(
     }>
   }
 ) {
-  console.log("sexcy");
   
-  console.log(props.links[0].name)
   return (
     <nav className={style.gap}>
       {props.links.map((l) => (

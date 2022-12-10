@@ -18,10 +18,12 @@ to make you stay in their revolutionary app and making you play stupid games,
 or trying to sell you bullshit content. The world should be purly content based,
 and not a toix+distracting wastland. +Information should be avaliable at minimum 
 cost, not free, let it be paid, but the price should not be unresonalble+
+I think you get it I like minmal modern heavly text based website. If you want
+reach me messaage me at discord.
 `;
 
 const techIUse = `
-VIM | LINUX | GNOME | TYPESCRIPT | REACT
+VIM | LINUX | GNOME | TYPESCRIPT | REACT | nextjs
 `.toUpperCase();
 
 const whatDoIlike = `
@@ -39,7 +41,6 @@ export default function Home(props: {}) {
           <p>{techIUse}</p>
           <h3>What do i like ?</h3>
           <p>{whatDoIlike}</p>
-          <h3>Buttons</h3>
         </div>
       </Layout>
     );
