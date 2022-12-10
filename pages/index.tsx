@@ -11,19 +11,20 @@ import Layout from "../layouts/layout";
 // }
 
 const aboutMe = `
-Do you think this webiste is +not cool or it dose not look good+ ?
-If you think so, then we can't be friends. You see this webiste represents
-what i like, and how i think the web should look. In my world no one is trying
-to make you stay in their revolutionary app and making you play stupid games, 
-or trying to sell you bullshit content. The world should be purly content based,
-and not a toix+distracting wastland. +Information should be avaliable at minimum 
-cost, not free, let it be paid, but the price should not be unresonalble+
-I think you get it I like minmal modern heavly text based website. If you want
-reach me messaage me at discord.
+Do you think this website is not cool, or it does not look good? If you think so,
+then we can't be friends. You see, this website represents what I like, 
+and how I think the WEB should look. In my world, no one is trying to make you stay
+in their revolutionary app and making you play stupid games or trying to sell
+you bullshit content. The world should be purely content based, and not a 
+toxic distracting Westland. Information should be available at minimum cost, not
+free, let it be paid, but the price should not be unreasonable I think you get it
+I like minimal modern heavy text based website. If you want to reach me, message
+me at discord.
 `;
 
 const techIUse = `
-VIM | LINUX | GNOME | TYPESCRIPT | REACT | nextjs
+VIM | LINUX | GNOME | TYPESCRIPT | REACT | nextjs | wayland | lazygit | 
+markdown | git
 `.toUpperCase();
 
 const whatDoIlike = `
@@ -37,7 +38,7 @@ export default function Home(props: {}) {
         <div className={`${style.padding}`}>
           <h3>About Me ?</h3>
           <p> {aboutMe} </p>
-          <h3>TECH I USE ?</h3>
+          <h3>Tech I Use ?</h3>
           <p>{techIUse}</p>
           <h3>What do i like ?</h3>
           <p>{whatDoIlike}</p>
