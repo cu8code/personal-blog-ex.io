@@ -1,52 +1,47 @@
-import Head from "next/head";
 import style from "../styles/Style.module.css";
-import { Nav } from "../components/nav/nav";
+import Layout from "../layouts/layout";
 
-const TITLE = "Ankan Roy FrontEnd Web developer";
-const S_TITLE = "~/Ankan Roy";
-const DESCRIPTION = "An Website about ME and My Daily Adventure";
+// export async function getServerSideProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`https://api.quotable.io/random`);
+//   const data = await res.json();
+//
+//   // Pass data to the page via props
+//   return { props: { data } };
+// }
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://api.quotable.io/random`);
-  const data = await res.json();
+const aboutMe = `
+Do you think this webiste is +not cool or it dose not look good+ ?
+If you think so, then we can't be friends. You see this webiste represents
+what i like, and how i think the web should look. In my world no one is trying
+to make you stay in their revolutionary app and making you play stupid games, 
+or trying to sell you bullshit content. The world should be purly content based,
+and not a toix+distracting wastland. +Information should be avaliable at minimum 
+cost, not free, let it be paid, but the price should not be unresonalble+
+`;
 
-  // Pass data to the page via props
-  return { props: { data } };
-}
+const techIUse = `
+VIM | LINUX | GNOME | TYPESCRIPT | REACT
+`.toUpperCase();
 
-export default function Home(props: {
-  data: {
-    content: string;
-  };
-}) {
-  return (
-    <div>
-      <Head>
-        <title>{TITLE}</title>
-        <meta name="description" content={DESCRIPTION} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h1 className={`${style.neonText}`}>
-        {S_TITLE}
-        <span className={style.blink}>_</span>{" "}
-      </h1>
-      <Nav links={["~", "~/blog"]}></Nav>
-      <i>{props.data.content}</i>
-      <br />
-      <div className={`${style.border} ${style.padding}`}>
-        <h3>About Me ?</h3>
-        <p>
-          weeb | anti-drug | anti-alcohol | pro-lgbt | pro-gun | pro-choice |
-          pro-democracy | pro-multipolar-world
-        </p>
-        <h3>TECH I USE ?</h3>
-        <p>VIM | LINUX | GNOME | TYPESCRIPT | REACT</p>
-        <h3>What do i like ?</h3>
-        <p>Anime | Manga | Manhwa | Coding | Politics</p>
-        <h3>Buttons</h3>
-        <p></p>
-      </div>
-    </div>
-  );
+const whatDoIlike = `
+Anime | Manga | Manhwa | Coding | Politics
+`.toUpperCase();
+
+export default function Home(props: {}) {
+  {
+    return (
+      <Layout>
+        <div className={`${style.padding}`}>
+          <h3>About Me ?</h3>
+          <p> {aboutMe} </p>
+          <h3>TECH I USE ?</h3>
+          <p>{techIUse}</p>
+          <h3>What do i like ?</h3>
+          <p>{whatDoIlike}</p>
+          <h3>Buttons</h3>
+        </div>
+      </Layout>
+    );
+  }
 }
