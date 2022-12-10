@@ -42,6 +42,14 @@ export default function Home(props: {}) {
           <p>{techIUse}</p>
           <h3>What do i like ?</h3>
           <p>{whatDoIlike}</p>
+          <h3>Best Movies ?</h3>
+          <p>Super 30 | Dangal</p>
+          <h3>Best TV show ?</h3>
+          <p>Silicon Valley</p>
+          <h3>Games ?</h3>
+          <p>clash of Clan | pubgm</p>
+          <h3>Best Anime ?</h3>
+          <p>Attack on Titan | Demon Slayer</p>
         </div>
       </Layout>
     );
