@@ -1,13 +1,12 @@
 import style from "../styles/Style.module.css";
 import Layout from "../layouts/layout";
 
-// export async function getServerSideProps() {
-//   // Fetch data from external API
-//   const res = await fetch(`https://api.quotable.io/random`);
-//   const data = await res.json();
-//
-//   // Pass data to the page via props
-//   return { props: { data } };
+// async function GetQuote() {
+//   const data = await fetch("https://api.quotable.io/random");
+//   const d: {
+//     content: string;
+//   } = data.json() as unknown as { content: string };
+//   return <i>{d.content}</i>;
 // }
 
 const aboutMe = `
@@ -43,31 +42,44 @@ const whatDoIlike = `
 Anime | Manga | Manhwa | Coding | Politics
 `.toUpperCase();
 
+const bestMovies = `
+Super 30 | Dangal
+`.toUpperCase();
+
+const best_TV_show = `
+Silicon Valley
+`.toUpperCase();
+
+const games = `
+clash of Clan | pubgm
+`.toUpperCase();
+
+const best_Anime = `
+Attack on Titan | Demon Slayer
+`.toUpperCase();
+
 export default function Home(props: {}) {
-  {
-    return (
-      <Layout>
-        <div className={`${style.padding}`}>
-          <p>{bullshit}</p>
-          <p>
-            <i>{bullshit2}</i>
-          </p>
-          <h3># About Me ?</h3>
-          <p> {aboutMe} </p>
-          <h3># Tech I Use ?</h3>
-          <p>{techIUse}</p>
-          <h3># What do i like ?</h3>
-          <p>{whatDoIlike}</p>
-          <h3># Best Movies ?</h3>
-          <p>Super 30 | Dangal</p>
-          <h3># Best TV show ?</h3>
-          <p>Silicon Valley</p>
-          <h3># Games ?</h3>
-          <p>clash of Clan | pubgm</p>
-          <h3># Best Anime ?</h3>
-          <p>Attack on Titan | Demon Slayer</p>
-        </div>
-      </Layout>
-    );
-  }
+  return (
+    <Layout>
+      <div className={`${style.padding}`}>
+        <p>{bullshit}</p>
+        <i>{bullshit2}</i>
+        <p></p>
+        <h3># About Me ?</h3>
+        <p> {aboutMe} </p>
+        <h3># Tech I Use ?</h3>
+        <p>{techIUse}</p>
+        <h3># What do i like ?</h3>
+        <p>{whatDoIlike}</p>
+        <h3># Best Movies ?</h3>
+        <p>{bestMovies}</p>
+        <h3># Best TV show ?</h3>
+        <p>{best_TV_show}</p>
+        <h3># Games ?</h3>
+        <p>{games}</p>
+        <h3># Best Anime ?</h3>
+        <p>{best_Anime}</p>
+      </div>
+    </Layout>
+  );
 }
