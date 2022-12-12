@@ -31,17 +31,28 @@ body {
   color: var(--color-accent-2);
   background-color: var(--color-bg-2);
   padding: 0.5rem;
-  word-spacing:0.5rem;
+  word-spacing: 0.5rem;
 }
-h1,h2,h3 {
-  word-spacing:0.1rem;
+h1,
+h2,
+h3 {
+  word-spacing: 0.1rem;
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+td {
+  padding: 0.5rem;
+  border-top: 2px solid var(--color-dark);
+}
+
+/* th { */
+/*   padding: 0.5rem; */
+/*   border-top: 2px solid var(--color-light); */
+/* } */
 
 * {
   box-sizing: border-box;

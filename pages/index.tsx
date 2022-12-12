@@ -9,27 +9,31 @@ import Layout from "../layouts/layout";
 //   return <i>{d.content}</i>;
 // }
 
-const aboutMe = `
-Do you think this website is not cool, or it does not look good? If you think so,
-then we can't be friends. You see, this website represents what I like, 
-and how I think the WEB should look. In my world, no one is trying to make you stay
-in their revolutionary app and making you play stupid games or trying to sell
-you bullshit content. The world should be purely content based, and not a 
-toxic distracting Westland. Information should be available at minimum cost, not
-free, let it be paid, but the price should not be unreasonable I think you get it
-I like minimal modern heavy text based website. If you want to reach me, message
-me at discord.
-`;
+// TODO make this date fetching through some external API
+function ageCal() {
+  const yer = Number(Date().slice(11, 16));
+  const myAge = 2004;
+  return yer - myAge;
+}
 
 const techIUse = `
-VIM | LINUX | GNOME | TYPESCRIPT | REACT | nextjs | wayland | lazygit | 
-markdown | git
+VIM, LINUX, GNOME, TYPESCRIPT, REACT, nextjs, wayland,
+lazygit, markdown, git
 `.toUpperCase();
 
-const bullshit = `
-Hello Friend, welcome to my corner of the internet. I am ankan roy 
-I am a 16 old guy from India, who loves computers and softwares. I am also a CS grad.
-But most importantly I am a man of culture. 
+const bullshit = ` 
+Hello Friend,
+welcome to my corner of the internet.I am ankan roy I am a ${ageCal()} 
+old guy from India, who loves computers and softwares.I am also a CS
+grad.But most importantly I am a man of culture. 
+`;
+
+const bullshit3 = `
+speaking of man of culture. Do you like crossplay i like it a lot, but due  to 
+financial reson i have not been able to buy crossplay stuff, Now you have the 
+opturnity, if you get me into an inturnship i promise you to give free early 
+acess to my crossplay onlyfan... (but remember i am just a male with slightly above
+average PP + i am not sexcy)
 `;
 
 const bullshit2 = `
@@ -38,47 +42,62 @@ A place where I am in control, with no censorship or manupilation.
 A place where my words don't get mixed up with noise.
 `;
 
-const whatDoIlike = `
-Anime | Manga | Manhwa | Coding | Politics
+const whatDoIlike = ` Anime, Manga, Manhwa, Coding, Politics
 `.toUpperCase();
 
-const bestMovies = `
-Super 30 | Dangal
+const bestMovies = ` Super 30, Dangal
 `.toUpperCase();
 
-const best_TV_show = `
-Silicon Valley
+const best_TV_show = ` Silicon Valley
 `.toUpperCase();
 
-const games = `
-clash of Clan | pubgm
+const games = ` clash of Clan, pubgm
 `.toUpperCase();
 
-const best_Anime = `
-Attack on Titan | Demon Slayer
+const best_Anime = ` Attack on Titan, Demon Slayer
 `.toUpperCase();
 
 export default function Home(props: {}) {
   return (
     <Layout>
       <div className={`${style.padding}`}>
-        <p>{bullshit}</p>
-        <i>{bullshit2}</i>
-        <p></p>
-        <h3># About Me ?</h3>
-        <p> {aboutMe} </p>
-        <h3># Tech I Use ?</h3>
-        <p>{techIUse}</p>
-        <h3># What do i like ?</h3>
-        <p>{whatDoIlike}</p>
-        <h3># Best Movies ?</h3>
-        <p>{bestMovies}</p>
-        <h3># Best TV show ?</h3>
-        <p>{best_TV_show}</p>
-        <h3># Games ?</h3>
-        <p>{games}</p>
-        <h3># Best Anime ?</h3>
-        <p>{best_Anime}</p>
+        <div>
+          <p>{bullshit}</p>
+          <i>{bullshit2}</i>
+          <p>{bullshit3}</p>
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <th className={style.neonText}>Q</th>
+              <th className={style.neonText}>Ans</th>
+            </tr>
+            <tr>
+              <td> Tech </td>
+              <td>{techIUse}</td>
+            </tr>
+            <tr>
+              <td> Hobby </td>
+              <td>{whatDoIlike}</td>
+            </tr>
+            <tr>
+              <td> Movies </td>
+              <td>{bestMovies}</td>
+            </tr>
+            <tr>
+              <td> TV </td>
+              <td>{best_TV_show}</td>
+            </tr>
+            <tr>
+              <td> Games </td>
+              <td>{games}</td>
+            </tr>
+            <tr>
+              <td> Anime </td>
+              <td>{best_Anime}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </Layout>
   );

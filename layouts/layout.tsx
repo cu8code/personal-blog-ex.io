@@ -8,7 +8,7 @@ const DESCRIPTION = "An Website about ME and My Daily Adventure";
 
 export default function Layout(props: { children: React.ReactNode }) {
   return (
-    <>
+    <div>
       <Head>
         <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
@@ -16,7 +16,7 @@ export default function Layout(props: { children: React.ReactNode }) {
       </Head>
       <h1 className={`${style.neonText}`}>
         {S_TITLE}
-        <span className={style.blink}>💡</span>{" "}
+        <span className={style.blink}>⚡</span>
       </h1>
       <Nav
         links={[
@@ -25,6 +25,6 @@ export default function Layout(props: { children: React.ReactNode }) {
         ]}
       ></Nav>
       {props.children}
-    </>
+    </div>
   );
 }
