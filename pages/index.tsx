@@ -29,11 +29,11 @@ grad.But most importantly I am a man of culture.
 `;
 
 const bullshit3 = `
-speaking of man of culture. Do you like crossplay i like it a lot, but due  to 
-financial reson i have not been able to buy crossplay stuff, Now you have the 
-opturnity, if you get me into an inturnship i promise you to give free early 
-acess to my crossplay onlyfan... (but remember i am just a male with slightly above
-average PP + i am not sexcy)
+Speaking of man of culture. Do you like cross play I like it a lot, but due to
+financial reason I have not been able to buy cross play stuff, Now you have the
+opportunity, if you get me into an internship I promise you to give free early
+access to my cross play OnlyFans… (but remember I am just a male with slightly 
+above average PP + i am not sexy) 
 `;
 
 const bullshit2 = `
