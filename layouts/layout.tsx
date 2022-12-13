@@ -3,7 +3,7 @@ import { Nav } from "../components/nav/nav";
 import style from "../styles/Style.module.css";
 
 const TITLE = "Ankan Roy FrontEnd Web developer";
-const S_TITLE = "[CuXCode]";
+const S_TITLE = "ellor.xyz";
 const DESCRIPTION = "An Website about ME and My Daily Adventure";
 
 export default function Layout(props: { children: React.ReactNode }) {
@@ -21,7 +21,8 @@ export default function Layout(props: { children: React.ReactNode }) {
       <Nav
         links={[
           { name: "~", href: "/" },
-          { name: "~/Blog", href: "/blog" },
+          { name: "~/blog", href: "/blog" },
+          { name: "~/links", href: "/links" },
         ]}
       ></Nav>
       {props.children}
