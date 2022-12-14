@@ -28,18 +28,18 @@ old guy from India, who loves computers and softwares.I am also a CS
 grad.But most importantly I am a man of culture. 
 `;
 
+const bullshit2 = `
+This place is home for all my psychological dysfunctioning.
+A place where I am in control, with no censorship or manupilation.
+A place where my words don't get mixed up with noise.
+`;
+
 const bullshit3 = `
 Speaking of man of culture. Do you like cross play I like it a lot, but due to
 financial reason I have not been able to buy cross play stuff, Now you have the
 opportunity, if you get me into an internship I promise you to give free early
 access to my cross play OnlyFans… (but remember I am just a male with slightly 
 above average PP + i am not sexy) 
-`;
-
-const bullshit2 = `
-This place is home for all my psychological dysfunctioning.
-A place where I am in control, with no censorship or manupilation.
-A place where my words don't get mixed up with noise.
 `;
 
 const whatDoIlike = ` Anime, Manga, Manhwa, Coding, Politics

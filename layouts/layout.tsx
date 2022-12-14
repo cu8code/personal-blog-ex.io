@@ -3,7 +3,7 @@ import { Nav } from "../components/nav/nav";
 import style from "../styles/Style.module.css";
 
 const TITLE = "Ankan Roy FrontEnd Web developer";
-const S_TITLE = "ellor.xyz";
+const S_TITLE = "fokir.xyz";
 const DESCRIPTION = "An Website about ME and My Daily Adventure";
 
 export default function Layout(props: { children: React.ReactNode }) {
