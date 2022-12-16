@@ -24,10 +24,12 @@ lazygit, markdown, git
 `.toUpperCase();
 
 const bullshit = ` 
-Hello Friend,
-welcome to my corner of the internet.I am ankan roy I am a ${ageCal()} 
-old guy from India, who loves computers and softwares.I am also a CS
-grad.But most importantly I am a man of culture. 
+Hello Friend, welcome to my personal website. My name is Ankan Roy and I am ${ageCal()} 
+years old. I am from India and I am a computer science graduate. In my free time
+, I enjoy exploring new software and learning about different cultures. This 
+website is a place where I can express myself freely and share my thoughts and 
+experiences without any censorship or manipulation. I hope you find it enjoyable 
+and informative
 `;
 
 const bullshit2 = `
