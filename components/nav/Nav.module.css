@@ -1,6 +1,38 @@
-.gap{
-    margin: 1rem;
+.nav {
+  flex-direction: row;
+  display: flex;
+  font-size: 1.25rem;
 }
-.large{
-    font-size: 1.35rem;
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-dark);
+  padding: 10px;
+}
+
+.nav a:hover {
+  background-color: #7d7c7c;
+}
+.gap {
+  margin: 1rem;
+}
+.large {
+  font-size: 1.35rem;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav li {
+    flex-basis: 100%;
+  }
 }

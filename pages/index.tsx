@@ -1,6 +1,8 @@
 import style from "../styles/Style.module.css";
 import Layout from "../layouts/layout";
 
+import { Canvas } from "@react-three/fiber";
+
 // async function GetQuote() {
 //   const data = await fetch("https://api.quotable.io/random");
 //   const d: {
@@ -35,11 +37,11 @@ A place where my words don't get mixed up with noise.
 `;
 
 const bullshit3 = `
-Speaking of man of culture. Do you like cross play I like it a lot, but due to
-financial reason I have not been able to buy cross play stuff, Now you have the
-opportunity, if you get me into an internship I promise you to give free early
-access to my cross play OnlyFans… (but remember I am just a male with slightly 
-above average PP + i am not sexy) 
+As a man of culture, I am a big fan of cross play. However, due to financial
+constraints, I have not been able to purchase any cross play items. If you can
+help me secure an internship, I would be happy to offer you early access to my
+cross play OnlyFans account as a thank you. Please note that I am just an average
+guy with slightly above average PP and I do not consider myself sexy.
 `;
 
 const whatDoIlike = ` Anime, Manga, Manhwa, Coding, Politics
