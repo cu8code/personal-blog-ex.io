@@ -38,8 +38,8 @@ export default function Links() {
 function toJSX(e: Links) {
   return e.map((item) => {
     return (
-      <li>
-        <a key={item.txt} href={item.href}>
+      <li key={item.txt}>
+        <a  href={item.href}>
           {item.txt}
         </a>
       </li>

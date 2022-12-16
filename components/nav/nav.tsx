@@ -11,8 +11,8 @@ export function Nav(props: {
     <nav className={style.nav}>
       <ul>
         {props.links.map((l) => (
-          <li>
-            <Link key={l.href} href={l.href}>
+          <li key={l.href}>
+            <Link  href={l.href}>
               {l.name}
             </Link>
           </li>
