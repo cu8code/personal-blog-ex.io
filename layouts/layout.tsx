@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Nav } from "../components/nav/nav";
 import style from "../styles/Style.module.css";
+import s from "./layout.module.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import { Mesh } from "three";
@@ -63,7 +64,7 @@ export default function Layout(props: { children: React.ReactNode }) {
   const [canvas, setCanvas] = useState(false);
   useEffect(() => {
     setCanvas(!isMobile());
-  },[]);
+  }, []);
   return (
     <div>
       <Head>
@@ -71,17 +72,19 @@ export default function Layout(props: { children: React.ReactNode }) {
         <meta name="description" content={DESCRIPTION} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className={`${style.neonText}`}>
-        {S_TITLE}
-        <span className={style.blink}>⚡</span>
-      </h1>
-      <Nav
-        links={[
-          { name: "[~]", href: "/" },
-          { name: "~/blog", href: "/blog" },
-          { name: "~/links", href: "/links" },
-        ]}
-      ></Nav>
+      <div className={s.nav_head}>
+        <h1 className={`${style.neonText}`}>
+          {S_TITLE}
+          <span className={style.blink}>⚡</span>
+        </h1>
+        <Nav
+          links={[
+            { name: "[~]", href: "/" },
+            { name: "~/blog", href: "/blog" },
+            { name: "~/links", href: "/links" },
+          ]}
+        ></Nav>
+      </div>
       {canvas ? (
         <Canvas>
           <RotatingSphere />

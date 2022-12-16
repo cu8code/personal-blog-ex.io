@@ -1,0 +1,12 @@
+.nav_head {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .nav_head {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
