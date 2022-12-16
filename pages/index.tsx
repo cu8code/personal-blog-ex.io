@@ -1,8 +1,6 @@
 import style from "../styles/Style.module.css";
 import Layout from "../layouts/layout";
 
-import { Canvas } from "@react-three/fiber";
-
 // async function GetQuote() {
 //   const data = await fetch("https://api.quotable.io/random");
 //   const d: {
@@ -16,6 +14,30 @@ function ageCal() {
   const yer = Number(Date().slice(11, 16));
   const myAge = 2004;
   return yer - myAge;
+}
+
+function getMobileOperatingSystem():
+  | "Windows Phone"
+  | "Android"
+  | "iOS"
+  | "unknown" {
+  var userAgent = navigator.userAgent || navigator.vendor;
+
+  // Windows Phone must come first because its UA also contains "Android"
+  if (/windows phone/i.test(userAgent)) {
+    return "Windows Phone";
+  }
+
+  if (/android/i.test(userAgent)) {
+    return "Android";
+  }
+
+  // iOS detection from: http://stackoverflow.com/a/9039885/177710
+  if (/iPad|iPhone|iPod/.test(userAgent)) {
+    return "iOS";
+  }
+
+  return "unknown";
 }
 
 const techIUse = `
