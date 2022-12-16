@@ -16,29 +16,6 @@ function ageCal() {
   return yer - myAge;
 }
 
-function getMobileOperatingSystem():
-  | "Windows Phone"
-  | "Android"
-  | "iOS"
-  | "unknown" {
-  var userAgent = navigator.userAgent || navigator.vendor;
-
-  // Windows Phone must come first because its UA also contains "Android"
-  if (/windows phone/i.test(userAgent)) {
-    return "Windows Phone";
-  }
-
-  if (/android/i.test(userAgent)) {
-    return "Android";
-  }
-
-  // iOS detection from: http://stackoverflow.com/a/9039885/177710
-  if (/iPad|iPhone|iPod/.test(userAgent)) {
-    return "iOS";
-  }
-
-  return "unknown";
-}
 
 const techIUse = `
 VIM, LINUX, GNOME, TYPESCRIPT, REACT, nextjs, wayland,
