@@ -48,6 +48,13 @@ a[target="_blank"]::after {
   margin: 0 3px 0 5px;
 }
 
+@media (max-width: 600px) {
+  li a[target="_blank"]{
+    font-size:1.2rem;
+    border:2px solid var(--color-hightlight);
+  }
+}
+
 td {
   padding: 0.5rem;
   border-top: 2px solid var(--color-dark);
@@ -61,4 +68,3 @@ td {
 * {
   box-sizing: border-box;
 }
-
