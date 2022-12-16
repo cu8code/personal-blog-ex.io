@@ -60,7 +60,7 @@ function RotatingSphere() {
 }
 
 export default function Layout(props: { children: React.ReactNode }) {
-  const [canvas, setCanvas] = useState(true);
+  const [canvas, setCanvas] = useState(false);
   useEffect(() => {
     setCanvas(!isMobile());
   },[]);
