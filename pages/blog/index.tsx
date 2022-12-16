@@ -1,6 +1,9 @@
 import Layout from "../../layouts/layout";
+import useSWR from "swr";
+import { useState } from "react";
 
 const url = "https://fokir.hashnode.dev/";
+const apiUrl = "https://api.hashnode.com/";
 
 const articleQuery = `
 query{
@@ -17,11 +20,11 @@ query{
 }
 `;
 
-export async function getServerSideProps() {
+function fetcher() {
   const query = articleQuery;
   const variables = {};
 
-  const res = await fetch("https://api.hashnode.com/", {
+  return fetch("https://api.hashnode.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,36 +33,28 @@ export async function getServerSideProps() {
       query,
       variables,
     }),
+  }).then((res) => {
+    return res.json().then((res) => {
+      return res.data.user.publication.posts;
+    });
   });
-  const data = await res.json();
-  console.log(data.user);
-  return { props: { data } };
 }
 
-type prop = {
-  data: {
-    data: {
-      user: {
-        publication: {
-          posts: [
-            {
-              slug: string;
-              title: string;
-            }
-          ];
-        };
-      };
-    };
-  };
-};
+export default function Blog() {
+  // const data = props.data.data.user.publication.posts;
+  const { data, error } = useSWR(apiUrl, fetcher);
+  if (error) {
+    return <Layout>ERROR</Layout>;
+  }
+  if (!data) {
+    return <Layout>Loading...</Layout>;
+  }
 
-export default function Blog(props: prop) {
-  const data = props.data.data.user.publication.posts;
   return (
     <Layout>
-    <h2>All my blogs are present in hashnode</h2>
+      <h2>All my blogs are present in hashnode</h2>
       <ul>
-        {data.map((e) => {
+        {data.map((e: any) => {
           return (
             <li key={e.slug}>
               <a rel="noreferrer" target={"_blank"} href={`${url}${e.slug}`}>
