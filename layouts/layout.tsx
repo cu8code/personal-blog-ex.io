@@ -1,10 +1,12 @@
-import Head from "next/head";
-import { Nav } from "../components/nav/nav";
 import style from "../styles/Style.module.css";
 import s from "./layout.module.css";
+
+import Head from "next/head";
+import { Nav } from "../components/nav/nav";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import { Mesh } from "three";
+import Link from "next/link";
 
 const TITLE = "Ankan Roy FrontEnd Web developer";
 const S_TITLE = "fokir.xyz";
@@ -66,7 +68,7 @@ export default function Layout(props: { children: React.ReactNode }) {
     setCanvas(!isMobile());
   }, []);
   return (
-    <div>
+    <>
       <Head>
         <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
@@ -74,12 +76,13 @@ export default function Layout(props: { children: React.ReactNode }) {
       </Head>
       <div className={s.nav_head}>
         <h1 className={`${style.neonText}`}>
+          <Link href="/">
           {S_TITLE}
-          <span className={style.blink}>⚡</span>
+            <span className={style.blink}>⚡</span>
+          </Link>
         </h1>
         <Nav
           links={[
-            { name: "[~]", href: "/" },
             { name: "~/blog", href: "/blog" },
             { name: "~/links", href: "/links" },
           ]}
@@ -93,6 +96,6 @@ export default function Layout(props: { children: React.ReactNode }) {
         <></>
       )}
       {props.children}
-    </div>
+    </>
   );
 }

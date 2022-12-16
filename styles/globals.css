@@ -25,12 +25,15 @@ i {
 
 html,
 body {
+  border:0;
   font-family: monospace;
   max-width: var(--mobile-size);
-  margin: auto;
+  margin-top:0;
+  margin-bottom:0;
+  margin-right: auto;
+  margin-left: auto;
   color: var(--color-accent-2);
   background-color: var(--color-bg-2);
-  padding: 0.5rem;
   word-spacing: 0.5rem;
 }
 h1,
@@ -44,7 +47,7 @@ a {
   text-decoration: none;
 }
 a[target="_blank"]::after {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  content: url("../static/share.png");
   margin: 0 3px 0 5px;
 }
 
@@ -67,4 +70,11 @@ td {
 
 * {
   box-sizing: border-box;
+}
+
+#__next{
+  margin:0;
+  padding:0;
+  background-color:black;
+  min-height:100vh;
 }
