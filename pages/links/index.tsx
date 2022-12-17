@@ -33,7 +33,7 @@ const develeoper_stuff: Links = [
 
 export default function Links() {
   return (
-    <Layout>
+    <>
       <div>
         <h3># Friends</h3>
         <p>
@@ -49,7 +49,7 @@ export default function Links() {
         <h3># Develeoper Stuff </h3>
         <ul>{toJSX(develeoper_stuff)}</ul>
       </div>
-    </Layout>
+    </>
   );
 }
 

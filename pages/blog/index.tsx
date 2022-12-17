@@ -44,14 +44,14 @@ export default function Blog() {
   // const data = props.data.data.user.publication.posts;
   const { data, error } = useSWR(apiUrl, fetcher);
   if (error) {
-    return <Layout>ERROR</Layout>;
+    return <div>ERROR</div>;
   }
   if (!data) {
-    return <Layout>Loading...</Layout>;
+    return <div>Loading...</div>;
   }
 
   return (
-    <Layout>
+    <>
       <h2>All my blogs are present in hashnode</h2>
       <ul>
         {data.map((e: any) => {
@@ -64,6 +64,6 @@ export default function Blog() {
           );
         })}
       </ul>
-    </Layout>
+    </>
   );
 }

@@ -62,7 +62,7 @@ const best_Anime = ` Attack on Titan, Demon Slayer
 
 export default function Home(props: {}) {
   return (
-    <Layout>
+    <>
       <div className={`${style.padding}`}>
         <div>
           <p>{bullshit}</p>
@@ -102,6 +102,6 @@ export default function Home(props: {}) {
           </tbody>
         </table>
       </div>
-    </Layout>
+    </>
   );
 }
